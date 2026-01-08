@@ -21,6 +21,7 @@ class MediaItem {
         this.title = title;
     }
 
+    @Override
     public String toString() {
         return "Title: " + title;
     }
@@ -31,12 +32,12 @@ class Song extends MediaItem implements Playable {
 
     public Song() {
         super();
-        this.duration = 0;
+        duration = 0;
     }
 
     public Song(String title) {
         super(title);
-        this.duration = 0;
+        duration = 0;
     }
 
     public Song(String title, int duration) {
@@ -126,6 +127,37 @@ class Playlist {
         }
     }
 
+    // SEARCH
+    public void searchByTitle(String title) {
+        for (int i = 0; i < songs.length; i++) {
+            if (songs[i].getTitle().equals(title)) {
+                System.out.println("Found: " + songs[i]);
+            }
+        }
+    }
+
+    // FILTER
+    public void filterByDuration(int min) {
+        for (int i = 0; i < songs.length; i++) {
+            if (songs[i].getDuration() > min) {
+                System.out.println(songs[i]);
+            }
+        }
+    }
+
+    // SORT (bubble sort, простой)
+    public void sortByDuration() {
+        for (int i = 0; i < songs.length - 1; i++) {
+            for (int j = 0; j < songs.length - 1; j++) {
+                if (songs[j].getDuration() > songs[j + 1].getDuration()) {
+                    Song temp = songs[j];
+                    songs[j] = songs[j + 1];
+                    songs[j + 1] = temp;
+                }
+            }
+        }
+    }
+
     @Override
     public String toString() {
         return "Playlist: " + name + ", songs: " + songs.length;
@@ -148,14 +180,29 @@ public class Main {
         System.out.println(artist);
         System.out.println(playlist);
 
-        System.out.println("\nSongs in playlist:");
+        System.out.println("\nAll songs:");
         playlist.showSongs();
 
         System.out.println("\nPlay song:");
         song1.play();
 
+        System.out.println("\nSearch result:");
+        playlist.searchByTitle("Believer");
+
+        System.out.println("\nFiltered songs (duration > 205):");
+        playlist.filterByDuration(205);
+
+        System.out.println("\nSorted songs:");
+        playlist.sortByDuration();
+        playlist.showSongs();
+
         System.out.println("\nEquals test:");
         Song testSong = new Song("Believer", 210);
         System.out.println(song3.equals(testSong));
+
+        // Polymorphism demonstration
+        MediaItem item = new Song("Test", 100);
+        System.out.println("\nPolymorphism:");
+        System.out.println(item);
     }
 }
