@@ -1,189 +1,102 @@
 # Java
-🎵 Music Media Management System 
+🎵 Music Media Management System
 
-This project was developed as part of Assignment 2 to demonstrate the application of Object-Oriented Programming principles in Java.
+Assignment 2 — Object Oriented Programming in Java
 
-The main goals of the assignment:
+📌 Project Purpose
 
-Apply data abstraction
+This project was created for Assignment 2 to demonstrate the practical application of Object-Oriented Programming principles in Java.
 
-Organize a data pool
+The system models a simple music management environment using songs, artists and playlists.
 
-Implement filtering, searching, and sorting
+🚀 Key Features
+1. Song Management
 
-Use encapsulation, inheritance, and polymorphism
+Create songs with title and duration.
 
-Override toString(), equals(), and hashCode() methods
+Display song information using overridden toString().
 
-Use interfaces, final methods, method overloading and overriding
+Compare two songs using overridden equals() and hashCode().
 
-📖 Project Description
+2. Artist Management
 
-The project represents a simple music media management system.
-It models real-world entities such as:
+Store artist name and genre.
 
-Songs
+Display artist information.
 
-Artists
+3. Playlist Management
 
-Playlists
+Create playlists with song count.
 
-The system allows working with songs as objects, storing them in arrays, displaying, comparing, and playing them using polymorphism.
+Display playlist information.
 
-🧱 Project Architecture
-🔹 Interface: Playable
+4. Object-Oriented Principles
 
-Defines common behavior for media objects.
+Encapsulation — all fields are private with getters and setters.
 
-void play();
+Inheritance — Song extends MediaItem.
 
+Polymorphism — through method overriding and interface usage.
 
-Purpose:
+Abstraction — base class MediaItem represents common media behavior.
 
-Demonstrates interface usage
+Overriding — toString(), equals(), hashCode().
 
-Enables polymorphism
+Overloading — multiple constructors.
 
-🔹 Class: MediaItem
+Interface implementation — for media behavior.
 
-Base abstract concept for all media objects.
+5. Data Processing
 
-Responsibilities:
+Store songs in an array.
 
-Stores title of media item
+Search songs by title.
 
-Provides encapsulated access
+Filter songs by duration.
 
-Concepts used:
+Display all stored songs.
 
-Encapsulation
+🧩 Project Structure
+File	Description
+MediaItem.java	Base class for media objects
+Song.java	Represents a song
+Artist.java	Represents an artist
+Playlist.java	Represents a playlist
+Playable.java	Interface for playable media
+Main.java	Program entry point
 
-Inheritance base class
+▶️ How to Run the Project
+Using IntelliJ IDEA
 
-Method overriding (toString())
+Clone or download the repository.
 
-🔹 Class: Song
+Open the project in IntelliJ IDEA.
 
-Extends MediaItem and implements Playable.
+Open Main.java.
 
-New functionality:
+Click Run button or press Shift + F10.
 
-Stores song duration
+Output will be shown in the console.
 
-Can be played using interface
+Using Terminal
+javac *.java
+java Main
 
-Can be compared using equals()
+🛠️ Functional Demonstration in Main
 
-Concepts demonstrated:
+The program demonstrates:
 
-Feature	Implementation
-Inheritance	extends MediaItem
-Interface	implements Playable
-Overloading	Multiple constructors
-Overriding	toString(), equals(), hashCode(), play()
-Encapsulation	Private fields
-Polymorphism	Interface call
-Final methods	Setters
-🔹 Class: Artist
+Creating songs, artists and playlists.
 
-Represents song artist.
+Displaying all objects.
 
-Purpose:
+Searching songs by title.
 
-Stores artist information
+Filtering songs by duration.
 
-Demonstrates encapsulation
+Comparing songs using equals method.
 
-🔹 Class: Playlist
-
-Represents a playlist containing an array of songs.
-
-New structure introduced:
-
-Song[] songs;
-
-
-This replaces collections to match current learning level.
-
-Functionality:
-
-Stores songs
-
-Counts songs
-
-Displays playlist content
-
-🔹 Class: Main
-
-Demonstrates:
-
-Object creation
-
-Data pool organization using arrays
-
-Searching
-
-Filtering
-
-Sorting (manual logic if added)
-
-Polymorphism usage
-
-Equality comparison
-
-⚙️ Implemented Functionalities
-Functionality	Description
-Create songs	Using overloaded constructors
-Store songs	Using arrays
-Display songs	Using overridden toString()
-Search	By title
-Filter	By duration
-Compare songs	Using equals()
-Play song	Using interface
-Playlist display	Show all songs
-🧠 OOP Principles Applied
-Principle	How it is used
-Encapsulation	Private fields, getters/setters
-Inheritance	Song extends MediaItem
-Polymorphism	Playable interface
-Abstraction	MediaItem base class
-Overriding	toString(), equals(), play()
-Overloading	Constructors
-Final methods	Setters
-Data pool	Song[] array
-🆕 New Concepts Introduced in Assignment 2
-
-Compared to previous version, this project now includes:
-
-Interface (Playable)
-
-Base parent class (MediaItem)
-
-Overridden equals() and hashCode()
-
-Method overloading
-
-Polymorphism
-
-Playlist data structure
-
-Separation of responsibility between classes
-
-▶️ How to Run
-
-Open project in IntelliJ IDEA
-
-Run Main.java
-
-Observe console output
-
-🎓 Educational Purpose
-
-This project demonstrates practical implementation of OOP concepts without using advanced Java collections or lambda expressions, in accordance with the current study level.
 
 👤 Author
 
-Student: [Your Name]
-Course: Java Programming
-Assignment: Assignment 2
-Year: 2026
+Student: Kokenov Alikhan
