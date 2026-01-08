@@ -1,6 +1,5 @@
 # Java
-🎵 Music Media Management System — Assignment 2
-📌 Assignment Objective
+🎵 Music Media Management System 
 
 This project was developed as part of Assignment 2 to demonstrate the application of Object-Oriented Programming principles in Java.
 
