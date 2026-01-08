@@ -170,17 +170,6 @@ Playlist data structure
 
 Separation of responsibility between classes
 
-🎯 Assignment Compliance
-Requirement	Implemented
-Data abstraction	Yes
-Data pool	Yes
-Filtering	Yes
-Searching	Yes
-Sorting	Yes
-Encapsulation	Yes
-Inheritance	Yes
-Polymorphism	Yes
-Override methods	Yes
 ▶️ How to Run
 
 Open project in IntelliJ IDEA
